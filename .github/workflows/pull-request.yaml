@@ -17,3 +17,4 @@ jobs:
           echo This script runs at a Pull Request is created or changed.
           echo "This workflow was triggered on branch ${{ github.ref }}"
           echo "The commit message is ${GITHUB_EVENT_PATH}"
+          cat "${GITHUB_EVENT_PATH}"
