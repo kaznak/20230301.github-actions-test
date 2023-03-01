@@ -16,3 +16,8 @@ jobs:
         run: |
           echo Hello, Github Actions!
           echo This script runs at a Pull Requst is Closed.
+          echo "This workflow was triggered on branch ${{ github.ref }}"
+          echo "The commit message is ${GITHUB_EVENT_PATH}"
+          echo "The pull request is #$(jq '.number' "${GITHUB_EVENT_PATH}")."
+          cat "${GITHUB_EVENT_PATH}"
+          echo
