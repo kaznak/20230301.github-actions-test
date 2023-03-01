@@ -18,4 +18,5 @@ jobs:
           echo "This workflow was triggered on branch ${{ github.ref }}"
           echo "The commit message is ${GITHUB_EVENT_PATH}"
           cat "${GITHUB_EVENT_PATH}"
+          echo
           echo "The pull request is #$(jq '.number' "${GITHUB_EVENT_PATH}")."
