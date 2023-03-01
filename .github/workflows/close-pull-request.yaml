@@ -15,4 +15,4 @@ jobs:
       - name: Run hello script
         run: |
           echo Hello, Github Actions!
-          echo This script runs at a Pull Resut Closed.
+          echo This script runs at a Pull Requst is Closed.
