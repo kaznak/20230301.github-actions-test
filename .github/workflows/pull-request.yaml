@@ -15,4 +15,4 @@ jobs:
         run: |
           echo Hello, Github Actions!
           echo This script runs at a Pull Request is created or changed.
-          echo This action runs on {{ github.ref }}.
+          echo "This action runs on ${{ github.ref }}."
