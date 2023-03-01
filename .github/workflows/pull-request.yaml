@@ -19,7 +19,7 @@ jobs:
     - name: use envsub
       run: |
         export NUMBER="$(jq '.number' "${GITHUB_EVENT_PATH}")"
-        envsub example.yaml -
+        envsub example.yaml /dev/stdout
 
     - name: Run hello script
       run: |
