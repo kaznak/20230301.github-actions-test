@@ -15,6 +15,11 @@ jobs:
       run: |
         npm -g install envsub
 
+    - name: use envsub
+      run: |
+        export NUMBER=$(jq -s '.number' "${GITHUB_EVENT_PATH}")
+        envsub example.yaml
+
     - name: Run hello script
       run: |
         echo Hello, Github Actions!
