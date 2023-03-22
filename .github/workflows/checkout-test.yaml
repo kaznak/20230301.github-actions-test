@@ -1,0 +1,23 @@
+name: Checkout repositories
+
+# trigger on:
+# - stright publish as release or prerelease
+# - publish from draft as release or prerelease
+# not trigger on:
+# - promote from prerelease to release
+# - create 
+
+on:
+  workflow_dispatch:
+
+jobs:
+  checkout-me:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+  checkout-other:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          repository: kaznak/20230207.release-tag-test
